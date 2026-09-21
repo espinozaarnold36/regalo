@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un pequeño detalle para ti</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div id="app">
+
+    <div class="stars"></div>
+
+    <!-- =====================================================
+         🎵 MÚSICA DE FONDO
+         Solo existe UN elemento de audio
+    ====================================================== -->
+    <audio
+      id="bgMusic"
+      src="Danny Ocean - Crayola (VISUALIZER).mp3"
+      loop
+      preload="auto">
+    </audio>
+
+    <!-- BOTÓN DE MÚSICA -->
+    <button
+      id="musicToggle"
+      class="music-btn"
+      type="button"
+      aria-label="Reproducir música"
+      aria-pressed="false">
+      <span class="music-icon">🎵</span>
+    </button>
+
+
+    <!-- =====================================================
+         ESCENA 1: TARJETA
+    ====================================================== -->
+    <section id="scene1" class="scene card-scene active">
+
+      <div class="content">
+
+        <div class="card-icon">💌</div>
+
+        <p class="eyebrow">
+          UN PEQUEÑO DETALLE
+        </p>
+
+        <h1>
+          Para mi Seli🌸 preciosa...
+        </h1>
+
+        <div class="intro-card">
+
+          <p>
+            Antes de comenzar, quería dejarte unas pequeñas palabras.
+          </p>
+
+          <p>
+            A veces no hace falta una gran ocasión para recordarte lo especial que eres para mí,
+            sino solo ser tú misma para poder yo seguir demostrándote lo que vales en mi vida...
+          </p>
+
+        </div>
+
+        <button
+          class="main-btn"
+          id="startBtn"
+          type="button">
+          Comenzar ✨
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 2: LUCIÉRNAGAS
+    ====================================================== -->
+    <section id="scene2" class="scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          LUCES EN LA OSCURIDAD
+        </p>
+
+        <h2>
+          Sigue a las luciérnagas ✨
+        </h2>
+
+        <p class="text">
+          Hay pequeñas luces escondidas por aquí.<br>
+          Atrapa las 5 para descubrir qué sucede después.
+        </p>
+
+        <div
+          class="firefly-area"
+          id="lightArea">
+        </div>
+
+        <p class="counter">
+          Luciérnagas atrapadas:
+          <span id="lightCount">0</span> / 5
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 3: SEMILLITA
+    ====================================================== -->
+    <section id="scene3" class="scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          UNA PEQUEÑA SEMILLITA
+        </p>
+
+        <h2>
+          Todo comienza con algo pequeño 🌱
+        </h2>
+
+        <p class="text">
+          Dale un poquito de luz y mira cómo empieza a crecer.
+        </p>
+
+        <div class="seed-garden">
+
+          <div class="ground-glow"></div>
+
+          <span
+            class="seed"
+            id="seedEmoji">
+            🌱
+          </span>
+
+        </div>
+
+        <div class="growth-progress">
+          <div
+            class="growth-bar"
+            id="growthBar">
+          </div>
+        </div>
+
+        <p class="growth-counter">
+          Luz entregada:
+          <span id="growCount">0</span> / 6
+        </p>
+
+        <button
+          class="main-btn"
+          id="growBtn"
+          type="button">
+          Dar luz ☀️
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 4: ESTRELLAS FUGACES
+    ====================================================== -->
+    <section id="scene4" class="scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          LLUVIA DE ESTRELLAS
+        </p>
+
+        <h2>
+          Pide un deseo 🌠
+        </h2>
+
+        <p class="text">
+          Las estrellas cruzan el cielo...
+          atrapa 4 para revelar un mensaje especial.
+        </p>
+
+        <div
+          class="stars-area"
+          id="starsArea">
+        </div>
+
+        <p class="counter">
+          Estrellas atrapadas:
+          <span id="starCount">0</span> / 4
+        </p>
+
+        <p
+          class="wish-message"
+          id="wishMessage">
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 5: FLORES
+    ====================================================== -->
+    <section
+      id="scene5"
+      class="scene flowers-scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          ESTÁ FLORECIENDO
+        </p>
+
+        <h2>
+          Mira cómo crece 🌻
+        </h2>
+
+        <p class="text">
+          De una pequeña semillita pueden nacer cosas realmente bonitas.
+        </p>
+
+        <div class="growing-garden">
+
+          <span class="garden-flower flower-a">🌻</span>
+          <span class="garden-flower flower-b">🌼</span>
+          <span class="garden-flower flower-c">🌻</span>
+          <span class="garden-flower flower-d">🌼</span>
+          <span class="garden-flower flower-e">🌻</span>
+          <span class="garden-flower flower-f">🌼</span>
+
+        </div>
+
+        <p class="flower-message">
+          Y parece que todavía falta algo...
+        </p>
+
+        <button
+          class="main-btn"
+          id="continueQuestionBtn"
+          type="button">
+          Continuar 👀
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 6: PREGUNTA
+    ====================================================== -->
+    <section id="scene6" class="scene">
+
+      <div class="content question-card">
+
+        <div class="question-icon">
+          👀
+        </div>
+
+        <p class="eyebrow">
+          UNA ÚLTIMA COSITA...
+        </p>
+
+        <h2>
+          ¿Sabes para quién son estas flores?
+        </h2>
+
+        <p class="text">
+          Piénsalo bien...
+        </p>
+
+        <div class="question-options">
+
+          <button
+            class="question-btn"
+            type="button"
+            data-answer="no">
+            🤔 No sé...
+          </button>
+
+          <button
+            class="question-btn"
+            type="button"
+            data-answer="maybe">
+            👀 ¿Para mí?
+          </button>
+
+          <button
+            class="question-btn special-answer"
+            type="button"
+            data-answer="yes">
+            💛 Creo que sí
+          </button>
+
+        </div>
+
+        <p
+          class="question-response"
+          id="questionResponse">
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 7: BURBUJAS
+    ====================================================== -->
+    <section id="scene7" class="scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          RECUERDOS FLOTANTES
+        </p>
+
+        <h2>
+          Atrapa los momentos bonitos 🫧
+        </h2>
+
+        <p class="text">
+          Hay burbujas con palabras especiales...
+          explota 6 para continuar.
+        </p>
+
+        <div
+          class="bubbles-area"
+          id="bubblesArea">
+        </div>
+
+        <p class="counter">
+          Burbujas explotadas:
+          <span id="bubbleCount">0</span> / 6
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 8: SOBRES
+    ====================================================== -->
+    <section id="scene8" class="scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          MENSAJES ESPECIALES
+        </p>
+
+        <h2>
+          Abre los sobres 💌
+        </h2>
+
+        <p class="text">
+          Hay 3 mensajes esperándote...
+          tócalos para descubrirlos.
+        </p>
+
+        <div
+          class="envelopes-container"
+          id="envelopesContainer">
+
+          <div
+            class="envelope"
+            data-message="Tu sonrisa ilumina hasta mis días más grises 💛">
+
+            <span class="envelope-icon">
+              💌
+            </span>
+
+            <p class="envelope-text"></p>
+
+          </div>
+
+
+          <div
+            class="envelope"
+            data-message="Contigo todo es más bonito, más fácil, más único ✨">
+
+            <span class="envelope-icon">
+              💌
+            </span>
+
+            <p class="envelope-text"></p>
+
+          </div>
+
+
+          <div
+            class="envelope"
+            data-message="Gracias por existir y por ser exactamente como eres 🌸">
+
+            <span class="envelope-icon">
+              💌
+            </span>
+
+            <p class="envelope-text"></p>
+
+          </div>
+
+        </div>
+
+        <p class="envelopes-counter">
+          Sobres abiertos:
+          <span id="envelopeCount">0</span> / 3
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESCENA 9: RAMO FINAL
+    ====================================================== -->
+    <section
+      id="scene9"
+      class="scene final-scene">
+
+      <div class="content">
+
+        <p class="eyebrow">
+          ENTONCES SÍ ERA PARA TI...
+        </p>
+
+        <div class="final-bouquet">
+
+          <div class="flowers-group">
+
+            <span class="flower f1">🌻</span>
+            <span class="flower f2">🌼</span>
+            <span class="flower f3">🌻</span>
+            <span class="flower f4">🌼</span>
+            <span class="flower f5">🌻</span>
+            <span class="flower f6">🌼</span>
+            <span class="flower f7">🌻</span>
+
+          </div>
+
+          <div class="bouquet-stems">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+          <div class="bouquet-wrap">
+
+            <div class="wrap-paper"></div>
+
+            <span class="ribbon-bow">
+              🎀
+            </span>
+
+          </div>
+
+        </div>
+
+        <h2 class="final-message">
+          Para ti, mi Seli preciosa 💛
+        </h2>
+
+        <p class="final-small">
+          Porque haces que mis días sean más bonitos.
+        </p>
+
+        <p class="text">
+          🌻 Un pequeño detalle de parte de tu bebi,
+          con mucho cariño 🌻
+        </p>
+
+        <button
+          class="secondary-btn"
+          id="restartBtn"
+          type="button">
+          Volver a comenzar ✨
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- CAPA DE PÉTALOS -->
+    <div
+      class="petals-layer"
+      id="petalsLayer">
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
